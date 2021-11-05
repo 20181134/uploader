@@ -12,11 +12,10 @@
         mkdir('upload');
       }
       // $file関数に"upload/ファイル名"を代入
-      $file='upload/'.basename($_FILES['file1']['name']);
+      $file='upload/'.basename($_FILES['file1']['tmp_name']);
       // 一時ファイルを$fileに保存
       if (move_uploaded_file($_FILES['file1']['tmp_name'], $file)) {
         echo $file, 'のアップロードが完了しました';
-        echo '<p><img src="', $file, '"</p>';
       } else {
         echo 'アップロードに失敗しました';
       }

@@ -5,8 +5,7 @@
   </head>
   <body>
     <h1>ファイルのアップロード</h1>
-    <form action="upload-output.php" method="post">
-      <enctype="multipart/form-data">
+    <form action="upload-output.php" method="post" enctype="multipart/form-data">
       <p><input type="file" name="file1"></p>
       <p><input type="submit" value="アップロード"></p>
     </form>
